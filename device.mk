@@ -56,3 +56,10 @@ PRODUCT_PACKAGES += \
 
 # System properties
 $(call inherit-product, device/samsung/jfvelte/system_prop.mk)
+
+#### Debug
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1 \
+    persist.sys.usb.config=adb
